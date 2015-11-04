@@ -15,7 +15,6 @@ gem 'bootstrap-sass', '~> 3.2.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'bcrypt-ruby', '~> 3.1', '>= 3.1.5'
-gem 'devise', '~> 3.5', '>= 3.5.2'
 gem 'omniauth-facebook', '~> 3.0'
 gem 'omniauth-oauth2', '~> 1.4'
 gem 'figaro', '~> 1.1', '>= 1.1.1'

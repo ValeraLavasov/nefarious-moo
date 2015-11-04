@@ -19,4 +19,8 @@ class SessionsController < ApplicationController
     log_out
     redirect_to root_path
   end
+
+  def show
+    raise request.env["omniauth.auth"].to_yaml
+  end
 end
