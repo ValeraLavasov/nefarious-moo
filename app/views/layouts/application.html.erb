@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Poets</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "poets", root_path, id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Sign up",  new_user_path %></li>
+            <li><%= link_to "Log in",  login_path %></li>
+            <% if logged_in? %>
+              <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  <% flash.each do |message_type, message| %>
+    <div class="alert alert-<%= message_type %>"><%= message %></div>
+  <% end %>
+<%= yield %>
+
+</body>
+</html>
